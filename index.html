@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Randomizer Name App</title>
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- animate css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="container animate__animated animate__fadeIn" id="container-1" v-if="state">
+      <h1>Who's next?</h1>
+
+      <div class="input-group">
+        <input type="text" placeholder="Insert name here..." v-model.trim="inputName">
+        <button class="btn-add" @click="addNameToList">Add</button>
+      </div>
+
+      <div class="error-label animate__animated animate__headShake" v-if="error">
+        {{ msgError }}
+      </div>
+
+      <ol class="list-name" id="names">
+        <li class="animate__animated animate__fadeIn" v-for="(name, index) in names" :key="index"
+          @click="removeName(index)">
+          {{ name }}
+        </li>
+      </ol>
+
+      <div class="btn-submit animate__animated animate__fadeIn" v-if="isReady">
+        <button @click="showResult">See Result!</button>
+      </div>
+    </div>
+
+    <div class="container animate__animated animate__fadeIn" id="container-2" v-if="!state">
+      <h1>The choosen is:</h1>
+
+      <div class="input-group">
+        <h1 class="animate__animated animate__bounce">{{ result }}</h1>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn-action border-green" @click="showInput">Start Over</button>
+        <button class="btn-action border-orange" @click="generateResult">Re-shuffle Again</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- vue -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <!-- custom js -->
+  <script src="./app.js"></script>
+</body>
+
+</html>

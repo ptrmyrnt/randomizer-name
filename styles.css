@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body #app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: url(https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+#app .container {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.568);
+  width: 515px;
+}
+
+#container-1 {
+  height: 398px;
+}
+
+.container .input-group,
+.container .error-label {
+  margin: 1.2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container .error-label {
+  color: red;
+  font-weight: 500;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.input-group input {
+  padding: 6px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #333;
+}
+
+.input-group input {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.input-group h1 {
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+.container .list-name {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 65%;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.list-name li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.list-name li {
+  font-size: 14px;
+  margin: 0.2rem 0;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.container .btn-group {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.btn-group .btn-action,
+.input-group button.btn-add,
+.btn-submit button {
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.btn-submit button {
+  width: 100%;
+  border: 2px solid rgb(19, 21, 146);
+  color: rgb(19, 21, 146);
+}
+
+.btn-submit button:hover {
+  background-color: rgb(19, 21, 146);
+  color: #fff;
+}
+
+.btn-add {
+  border: 2px solid rgb(146, 87, 19);
+  color: rgb(146, 87, 19);
+}
+
+.btn-add:hover {
+  background-color: rgb(146, 87, 19);
+  color: #fff;
+}
+
+.border-green {
+  border: 2px solid rgb(33, 153, 83);
+  color: rgb(33, 153, 83);
+}
+
+.border-green:hover {
+  background-color: rgb(33, 153, 83);
+  color: #fff;
+}
+
+.border-orange {
+  border: 2px solid rgb(219, 143, 29);
+  color: rgb(219, 143, 29);
+}
+
+.border-orange:hover {
+  background-color: rgb(219, 143, 29);
+  color: #fff;
+}
